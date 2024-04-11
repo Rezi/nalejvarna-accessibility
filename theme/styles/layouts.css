@@ -1,6 +1,7 @@
 :root {
   --ciklum-color-dark: #001528;
   --ciklum-color-green: #00ffbe;
+  --ciklum-color-gray: #999999;
   --ciklum-color-violet-light: #6450ff;
   --ciklum-color-blue: #0020bb;
   --ciklum-color-white: #ffffff;
@@ -25,6 +26,22 @@ html:not(.dark) {
 
 .slidev-layout {
   background-color: #f3f3f3;
+
+  a,
+  a:visited,
+  a:active,
+  a:focus,
+  a:hover {
+    color: var(--ciklum-color-blue);
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li::marker {
+      color: var(--ciklum-color-blue);
+    }
+  }
 
   p + h2,
   ul + h2,
@@ -75,10 +92,6 @@ html:not(.dark) {
   }
 }
 
-a {
-  color: var(--ciklum-color-blue);
-}
-
 .default-slide h1 {
   margin-bottom: 3rem;
 }
@@ -117,7 +130,7 @@ a {
     left: -0.5rem;
     width: 100vw;
     height: 1px;
-    background-color: var(--ciklum-color-dark);
+    background-color: var(--ciklum-color-blue);
     content: '';
     transform: translateX(-100%);
   }

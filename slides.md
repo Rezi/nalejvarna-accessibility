@@ -206,11 +206,10 @@ import { computed, ref } from 'vue'
 
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
-
 doubled.value = 2
 ```
 
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
+<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="var(--ciklum-color-blue)" width="2" arrowSize="1" />
 
 <!-- This allow you to embed external code blocks -->
 <<< @/snippets/external.ts#snippet
@@ -220,11 +219,9 @@ doubled.value = 2
 
 <!-- Inline style -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
+
 .footnotes {
-  @apply text-sm opacity-75;
+  @apply text-sm;
 }
 .footnote-backref {
   display: none;
@@ -322,74 +319,146 @@ const author = {
 
 You can create diagrams / graphs from textual descriptions, directly in your Markdown.
 
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
+<div class="grid grid-cols-3 gap-5 pt-4 -mb-6">
 
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
+```mermaid {theme: 'base', scale: 0.5, alt: 'A simple sequence diagram'}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#00ffbe',
+      'primaryTextColor': '#001528',
+      'primaryBorderColor': '#001528',
+      'lineColor': '#001528',
+      'secondaryColor': '#50eaff',
+      'tertiaryColor': '#6450ff',
+      'noteTextColor': '#ffffff',
+      'noteBkgColor': '#6450ff',
+      'fontFamily': 'inherit'
+    }
+  }
+}%%
 sequenceDiagram
     Alice->John: Hello John, how are you?
     Note over Alice,John: A typical interaction
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
+```mermaid {theme: 'base', scale: 0.8}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#00ffbe',
+      'primaryTextColor': '#001528',
+      'primaryBorderColor': '#001528',
+      'lineColor': '#001528',
+      'secondaryColor': '#50eaff',
+      'tertiaryColor': '#6450ff',
+      'noteTextColor': '#ffffff',
+      'noteBkgColor': '#6450ff',
+      'fontFamily': 'inherit'
+      
+    }
+  }
+}%%
 graph TD
 B[Text] --> C{Decision}
 C -->|One| D[Result 1]
 C -->|Two| E[Result 2]
 ```
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+```mermaid {theme: 'base'}
+%%{
+  init: {
+    'theme': 'base',
+   
+    "pie": {"textPosition": 0.7}, 
+    "themeVariables": {
+      "pieOuterStrokeWidth": "2px",
+      'primaryColor': '#00ffbe',
+      'primaryTextColor': '#001528',
+      'primaryBorderColor': '#001528',
+      'lineColor': '#001528',
+      'secondaryColor': '#50eaff',
+      'tertiaryColor': '#6450ff',
+      'noteTextColor': '#ffffff',
+      'noteBkgColor': '#6450ff',
+      'fontFamily': 'inherit',
+      'pieOpacity':1,
+      'pieTitleTextSize':'30px',
+      'pieLegendTextSize':'20px'
+      }
+  }
+}%%
+pie showData
+    title Key elements in Product X
+    "Calcium" : 32.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  15
+```
+</div>
+
+[Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
+---
+
+# Diagrams 2
+
+You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+
+<div class="grid grid-cols-2 gap-5 pt-4 -mb-6">
+
+```mermaid {theme: 'base', scale:  0.9}
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#00ffbe',
+      'primaryTextColor': '#fff',
+      'lineColor': '#001528',
+      'secondaryColor': '#50eaff',
+      'tertiaryColor': '#6450ff',
+      'fontFamily': 'inherit'
+    }
+  }
+}%%
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit
+   commit
+
 ```
 
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
+```mermaid {theme: 'base'}
+%%{
+  init: { 
+  "themeVariables": 
+    {
+      'fontFamily': 'inherit',
+      "xyChart": 
+      {
+        'plotColorPalette': '#00ffbe, #6450ff, #50eaff, #0020bb'
+        
+      } 
+    } 
   }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
+}%%
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
 ```
-
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
