@@ -4,6 +4,7 @@ To start the slide show:
 
 - Fork the [repo](https://gitlab.ciklum.net/js-community/events/slidev-template-2024) and create your presentation (`slides.md`) based on the template
   - Do not push to the original repository!
+- This repo uses [Corepack](https://nodejs.org/api/corepack.html), to enable it run `corepack enable`.
 - `pnpm install`
 - `pnpm run dev`
 - visit http://localhost:3030
@@ -23,7 +24,7 @@ You can see the [presentation template in action here](https://cheery-piroshki-f
 - you can easily add the following to the presentation
   - HTML, CSS, Javascript
   - Code examples with steps and highlights
-  - Inline typescript code editor 
+  - Inline typescript code editor
   - Iframes
   - Mermaid diagrams
 
