@@ -11,7 +11,7 @@ const props = defineProps({
 });
 
 const style = computed(() =>
-  handleBackground(props.background, props.backgroundSize, props.withLogo)
+  handleBackground(props.background, props.backgroundSize, props.withLogo),
 );
 </script>
 

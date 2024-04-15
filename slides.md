@@ -41,14 +41,12 @@ layout: default
 - Any custom Ciklum slide can have a background
   - If you want to add our own background image use it as `background: ./test.png` and add the image into the `public` root folder
 
-
 ---
 layout: centered
 background: ./theme/bgs/wawy3.png
 ---
 
 # Section title
-
 
 ---
 layout: centered
@@ -77,11 +75,9 @@ image: test.png
 
 # Image bottom right
 
-asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf 
-
+asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf
 
 ---
-
 
 # Default slide 
 
@@ -93,10 +89,10 @@ asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asda
 * &lt;funny meme goes here&gt;
 * &lt;funny meme goes here&gt;
 
-
 ---
 layout: two-columns
 ---
+
 ::top::
 # Two columns layout
 
@@ -131,7 +127,6 @@ All content after `::right::` ends up on the left
 - Some other content here
 - Some other content here
 
-
 ---
 layout: centered
 background: '#f3f3f3'
@@ -151,11 +146,7 @@ transition: slide-up
 ---
 layout: iframe
 url: https://sli.dev/builtin/layouts
-
-
-
 ---
-
 
 ---
 layout: two-columns
@@ -296,7 +287,6 @@ const author = {
 </script>
 ```
 ````
-
 
 ---
 
@@ -448,7 +438,6 @@ xychart-beta
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
-
 ---
 
 # Clicks Animations
@@ -486,7 +475,6 @@ also allows you to add
 
 </div>
 
-
 ---
 
 # Monaco Editor
@@ -513,7 +501,6 @@ function fibonacci(n: number): number {
 console.log(Array.from({ length: 10 }, (_, i) => fibonacci(i + 1)))
 ```
 
-
 ---
 layout: centered
 ---
@@ -523,4 +510,3 @@ layout: centered
 ---
 layout: thank-you
 ---
-

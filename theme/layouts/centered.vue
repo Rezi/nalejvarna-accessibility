@@ -17,8 +17,8 @@ const style = computed(() =>
     props.backgroundSize,
     props.withLogo,
     props.logoPosition,
-    'centered'
-  )
+    'centered',
+  ),
 );
 </script>
 

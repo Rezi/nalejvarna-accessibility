@@ -19,8 +19,8 @@ const style = computed(() =>
     props.background,
     props.backgroundSize,
     props.withLogo,
-    props.logoPosition
-  )
+    props.logoPosition,
+  ),
 );
 </script>
 

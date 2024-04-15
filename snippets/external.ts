@@ -2,8 +2,8 @@
 
 // #region snippet
 function hello() {
-  console.log('Hello from snippets/external.ts')
+  console.log('Hello from snippets/external.ts');
 }
 // #endregion snippet
 
-export default hello
+export default hello;
