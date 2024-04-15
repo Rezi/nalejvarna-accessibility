@@ -5,9 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@excalidraw/excalidraw':
+    specifier: ^0.17.5
+    version: 0.17.5(react-dom@18.2.0)(react@18.2.0)
   '@slidev/cli':
     specifier: ^0.48.9
-    version: 0.48.9(@types/markdown-it@14.0.1)(postcss@8.4.38)
+    version: 0.48.9(@types/markdown-it@14.0.1)(postcss@8.4.38)(react@18.2.0)
   '@slidev/theme-default':
     specifier: latest
     version: 0.25.0
@@ -601,6 +604,16 @@ packages:
     dev: false
     optional: true
 
+  /@excalidraw/excalidraw@0.17.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-XtFtzhQvt5g8quj1KmVQ6LBgv3M5WGDOm50dTcQz9Royc6AImh2X1Zw6ULcsujsjMFFBbG46nJLELsd/6yLlIw==}
+    peerDependencies:
+      react: ^17.0.2 || ^18.2.0
+      react-dom: ^17.0.2 || ^18.2.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /@floating-ui/core@1.6.0:
     resolution: {integrity: sha512-PcF++MykgmTj3CIyOQbKA/hDzOAiqI3mhuoN44WRCopIs1sgoDoU4oty4Jtqaj/y3oDU6fnVSm4QG0a3t5i0+g==}
     dependencies:
@@ -1010,7 +1023,7 @@ packages:
     dev: false
     optional: true
 
-  /@slidev/cli@0.48.9(@types/markdown-it@14.0.1)(postcss@8.4.38):
+  /@slidev/cli@0.48.9(@types/markdown-it@14.0.1)(postcss@8.4.38)(react@18.2.0):
     resolution: {integrity: sha512-qMGOULq374kYHKmKLeUcBu9z3GrD2D7cH65+lILKnM6vXKH4DRQnHsgDtsbnkDtOnZQJAL6RoQNnElOIA9Oq3g==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -1029,7 +1042,7 @@ packages:
       '@shikijs/markdown-it': 1.3.0
       '@shikijs/twoslash': 1.3.0(typescript@5.4.5)
       '@shikijs/vitepress-twoslash': 1.3.0(typescript@5.4.5)
-      '@slidev/client': 0.48.9(postcss@8.4.38)(vite@5.2.8)
+      '@slidev/client': 0.48.9(postcss@8.4.38)(react@18.2.0)(vite@5.2.8)
       '@slidev/parser': 0.48.9(postcss@8.4.38)(typescript@5.4.5)(vite@5.2.8)
       '@slidev/types': 0.48.9(postcss@8.4.38)(typescript@5.4.5)(vite@5.2.8)
       '@unocss/extractor-mdc': 0.58.9
@@ -1071,7 +1084,7 @@ packages:
       resolve-global: 2.0.0
       semver: 7.6.0
       shiki: 1.3.0
-      shiki-magic-move: 0.3.6(shiki@1.3.0)(vue@3.4.21)
+      shiki-magic-move: 0.3.6(react@18.2.0)(shiki@1.3.0)(vue@3.4.21)
       sirv: 2.0.4
       typescript: 5.4.5
       unocss: 0.58.9(postcss@8.4.38)(vite@5.2.8)
@@ -1112,7 +1125,7 @@ packages:
       - vue-template-es2015-compiler
     dev: false
 
-  /@slidev/client@0.48.9(postcss@8.4.38)(vite@5.2.8):
+  /@slidev/client@0.48.9(postcss@8.4.38)(react@18.2.0)(vite@5.2.8):
     resolution: {integrity: sha512-f2QhdPAgq/97h/c+Uu/jqFKAlE+pOV3AY82nOQxPJLyvWGFXv5ZD2Do5wp5iJcL25xHQI8Bjdn2iXzxvtAu81g==}
     engines: {node: '>=18.0.0'}
     dependencies:
@@ -1144,7 +1157,7 @@ packages:
       prettier: 3.2.5
       recordrtc: 5.6.2
       shiki: 1.3.0
-      shiki-magic-move: 0.3.6(shiki@1.3.0)(vue@3.4.21)
+      shiki-magic-move: 0.3.6(react@18.2.0)(shiki@1.3.0)(vue@3.4.21)
       typescript: 5.4.5
       unocss: 0.58.9(postcss@8.4.38)(vite@5.2.8)
       vue: 3.4.21(typescript@5.4.5)
@@ -3369,6 +3382,13 @@ packages:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
     dev: false
 
+  /loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
+
   /lowercase-keys@3.0.0:
     resolution: {integrity: sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4411,6 +4431,23 @@ packages:
     dev: false
     optional: true
 
+  /react-dom@18.2.0(react@18.2.0):
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+    peerDependencies:
+      react: ^18.2.0
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.23.0
+    dev: false
+
+  /react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
   /readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
@@ -4528,6 +4565,12 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
+  /scheduler@0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
   /scule@1.3.0:
     resolution: {integrity: sha512-6FtHJEvt+pVMIB9IBY+IcCJ6Z5f1iQnytgyfKMhDKgmzYG+TeH/wx1y3l27rshSbLiSanrR9ffZDrEsmjlQF2g==}
     requiresBuild: true
@@ -4567,7 +4610,7 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /shiki-magic-move@0.3.6(shiki@1.3.0)(vue@3.4.21):
+  /shiki-magic-move@0.3.6(react@18.2.0)(shiki@1.3.0)(vue@3.4.21):
     resolution: {integrity: sha512-s0nwJ4a3hleeCG/qPOqGtJUYP36RU2kUiwrZhsfdMfTCV/URAxqittWb7/rWsJr+sONOUwt5pSks+8ZQ8rkA1Q==}
     peerDependencies:
       react: ^18.2.0
@@ -4583,6 +4626,7 @@ packages:
     dependencies:
       diff-match-patch-es: 0.1.0
       ohash: 1.1.3
+      react: 18.2.0
       shiki: 1.3.0
       vue: 3.4.21(typescript@5.4.5)
     dev: false

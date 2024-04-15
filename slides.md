@@ -439,6 +439,20 @@ xychart-beta
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
+withLogo: false
+background: '#fff'
+---
+
+<excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" />
+
+---
+withLogo: false
+background: '#121212'
+---
+
+<excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" :darkMode="true" />
+
+---
 
 # Clicks Animations
 
