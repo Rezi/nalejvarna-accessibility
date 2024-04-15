@@ -44,7 +44,7 @@ layout: intro
 layout: default
 ---
 
-- There are following layouts prepared for Ciklum presentations:
+- There are the following layouts prepared for Ciklum presentations:
   - centered
   - default (same as if you don't define any)
   - iframe
@@ -52,9 +52,9 @@ layout: default
   - image-right (top right)
   - intro (section for name and date included)
   - thank you
-  - two columns (can have also full width section above `::top::` and below `::bottom::` the columns)
-- Any custom Ciklum slide can have background
-  - If you want to add our own background image use it as `background: ./test.png` and add the image into `public` root folder
+  - two columns (can have also full-width section above `::top::` and below `::bottom::` the columns)
+- Any custom Ciklum slide can have a background
+  - If you want to add our own background image use it as `background: ./test.png` and add the image into the `public` root folder
 
 
 ---
