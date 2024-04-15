@@ -13,6 +13,10 @@ Edit the [slides.md](./slides.md) to see the changes.
 
 Learn more about Slidev on [documentations](https://sli.dev/).
 
+## Example
+
+You can see the [presentation template in action here](https://cheery-piroshki-f43374.netlify.app/1)
+
 ## Why to use Slidev over poverpoint?
 
 - It can be coded, rather than composed in an Powerpoint
