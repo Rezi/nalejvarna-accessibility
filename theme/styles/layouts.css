@@ -20,6 +20,12 @@ html:not(.dark) {
   }
 }
 
+.monaco-editor .view-overlays .current-line-exact {
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
 .shiki-container {
   text-align: left;
 }
@@ -32,6 +38,7 @@ html:not(.dark) {
   a:active,
   a:focus,
   a:hover {
+    border-style: solid;
     color: var(--ciklum-color-blue);
   }
 

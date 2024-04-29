@@ -20,7 +20,7 @@
         "sans": "Public Sans",
         "serif": "Public Sans",
         "italic": true,
-        "weights": "100,200"
+        "weights": "100,200,600"
       }
     }
   },

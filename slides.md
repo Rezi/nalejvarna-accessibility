@@ -334,7 +334,7 @@ You can create diagrams / graphs from textual descriptions, directly in your Mar
       'tertiaryColor': '#6450ff',
       'noteTextColor': '#ffffff',
       'noteBkgColor': '#6450ff',
-      'fontFamily': 'inherit'
+      'fontFamily': 'Public Sans'
     }
   }
 }%%
@@ -356,7 +356,7 @@ sequenceDiagram
       'tertiaryColor': '#6450ff',
       'noteTextColor': '#ffffff',
       'noteBkgColor': '#6450ff',
-      'fontFamily': 'inherit'
+      'fontFamily': 'Public Sans'
       
     }
   }
@@ -383,7 +383,7 @@ C -->|Two| E[Result 2]
       'tertiaryColor': '#6450ff',
       'noteTextColor': '#ffffff',
       'noteBkgColor': '#6450ff',
-      'fontFamily': 'inherit',
+      'fontFamily': 'Public Sans',
       'pieOpacity':1,
       'pieTitleTextSize':'30px',
       'pieLegendTextSize':'20px'
@@ -419,7 +419,7 @@ You can create diagrams / graphs from textual descriptions, directly in your Mar
       'lineColor': '#001528',
       'secondaryColor': '#50eaff',
       'tertiaryColor': '#6450ff',
-      'fontFamily': 'inherit'
+      'fontFamily': 'Public Sans'
     }
   }
 }%%
@@ -442,7 +442,7 @@ gitGraph
   init: { 
   "themeVariables": 
     {
-      'fontFamily': 'inherit',
+      'fontFamily': 'Public Sans',
       "xyChart": 
       {
         'plotColorPalette': '#00ffbe, #6450ff, #50eaff, #0020bb'
