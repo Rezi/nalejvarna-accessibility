@@ -440,17 +440,10 @@ xychart-beta
 
 ---
 withLogo: false
-background: '#fff'
+background: '#f3f3f3'
 ---
 
 <excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" />
-
----
-withLogo: false
-background: '#121212'
----
-
-<excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" :darkMode="true" />
 
 ---
 
