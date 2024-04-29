@@ -14,7 +14,7 @@ export function handleBackground(
   background?: string,
   backgroundSize = 'cover',
   withLogo = true,
-  logoPosition: 'right' | 'left' = 'right'
+  logoPosition: 'right' | 'left' = 'right',
 ): CSSProperties {
   const isColor =
     background && ['#', 'rgb', 'hsl'].some((v) => background.indexOf(v) === 0);

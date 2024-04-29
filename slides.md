@@ -1,44 +1,29 @@
 ---
-# try also 'default' to start simple
-theme: ./theme
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-# apply any windi css classes to the current slide
 title: 'Ciklum presentation'
-class: 'text-center'
-# https://sli.dev/custom/highlighters.html
-highlighter: shiki
-# show line numbers in code blocks
-lineNumbers: true
-
-# persist drawings in exports and build
-drawings:
-  persist: false
-# page transition
-transition: slide-left
-# use UnoCSS
-css: unocss
-# enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
-mdc: true
-
-
 layout: intro
+# Presentation Setup (for all option see: https://sli.dev/custom/#frontmatter-configures)
+theme: ./theme
+class: 'text-center'
+highlighter: shiki # https://sli.dev/custom/highlighters.html
+lineNumbers: true # show line numbers in code blocks
+drawings:
+  persist: false # persist drawings in exports and build
+transition: none # no transition for better online screen sharing - or use "slide-left"
+css: unocss
+mdc: true # enable "Markdown Components" syntax: https://sli.dev/guide/syntax#mdc-syntax
+routerMode: hash # more compatible with static site hosting
 ---
 
-<template v-slot:date>
-  xx.yy.2024
-</template>
+::date::
+xx.yy.2024
 
-<template v-slot:title>
- <h1>Ciklum slides template
-</h1>
-</template>
-<template v-slot:description>
-  <div class="pb-6">Everything you need to know about, ....</div>
-  <div>Your Name  </div>
-  <div> Developer at Ciklum </div>
-  
-</template> 
+::title::
+# Ciklum slides template
+
+::description::
+<div class="pb-6">Everything you need to know about, ....</div>
+<div>Your Name</div>
+<div>Developer at Ciklum</div>
 
 ---
 layout: default
@@ -56,14 +41,12 @@ layout: default
 - Any custom Ciklum slide can have a background
   - If you want to add our own background image use it as `background: ./test.png` and add the image into the `public` root folder
 
-
 ---
 layout: centered
 background: ./theme/bgs/wawy3.png
 ---
 
 # Section title
-
 
 ---
 layout: centered
@@ -92,11 +75,9 @@ image: test.png
 
 # Image bottom right
 
-asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf 
-
+asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf
 
 ---
-
 
 # Default slide 
 
@@ -108,10 +89,10 @@ asdasd asd sdf sdafgf sdf sdf sdf sdf asdasd asd sdf sdafgf sdf sdf sdf sdf asda
 * &lt;funny meme goes here&gt;
 * &lt;funny meme goes here&gt;
 
-
 ---
 layout: two-columns
 ---
+
 ::top::
 # Two columns layout
 
@@ -146,7 +127,6 @@ All content after `::right::` ends up on the left
 - Some other content here
 - Some other content here
 
-
 ---
 layout: centered
 background: '#f3f3f3'
@@ -166,11 +146,7 @@ transition: slide-up
 ---
 layout: iframe
 url: https://sli.dev/builtin/layouts
-
-
-
 ---
-
 
 ---
 layout: two-columns
@@ -311,7 +287,6 @@ const author = {
 </script>
 ```
 ````
-
 
 ---
 
@@ -463,6 +438,19 @@ xychart-beta
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
+---
+withLogo: false
+background: '#fff'
+---
+
+<excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" />
+
+---
+withLogo: false
+background: '#121212'
+---
+
+<excalidraw-svg src="drawings/example.excalidraw" :fullscreen="true" :darkMode="true" />
 
 ---
 
@@ -501,7 +489,6 @@ also allows you to add
 
 </div>
 
-
 ---
 
 # Monaco Editor
@@ -528,7 +515,6 @@ function fibonacci(n: number): number {
 console.log(Array.from({ length: 10 }, (_, i) => fibonacci(i + 1)))
 ```
 
-
 ---
 layout: centered
 ---
@@ -538,4 +524,3 @@ layout: centered
 ---
 layout: thank-you
 ---
-
